@@ -6,7 +6,7 @@ function App() {
 
     useEffect(() => {
         //const backendUrl = process.env.REACT_APP_BACKEND_URL;
-        const backendUrl = 'https:localhost:5000'
+        const backendUrl = 'https://group-3-backend.sctp-sandbox-dev.com:5000' || 'https://group-3-backend-uat.sctp-sandbox.com:5000' || 'https://group-3-backend-prod.sctp-sandbox.com:5000'
         fetch(`${backendUrl}/movies`)
             .then(response => response.json())
             .then(data => setMovies(data.results))
