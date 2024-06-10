@@ -360,3 +360,47 @@ resource "aws_route_table_association" "private2" {
   subnet_id      = aws_subnet.private2.id
   route_table_id = aws_route_table.private.id
 }
+
+# ACM Certificate
+resource "aws_acm_certificate" "cert" {
+  domain_name       = "group-3-backend-${var.branch_name}.sctp-sandbox.com"
+  validation_method = "DNS"
+  
+  subject_alternative_names = [
+    "group-3-backend-${var.branch_name}.sctp-sandbox.com",
+  ]
+
+  tags = {
+    Name = "group-3-backend-${var.branch_name}"
+  }
+}
+
+resource "aws_route53_record" "cert_validation" {
+  for_each = {
+    for dvo in aws_acm_certificate.cert.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      type   = dvo.resource_record_type
+      record = dvo.resource_record_value
+    }
+  }
+  
+  zone_id = var.route53_zone_id
+  name    = each.value.name
+  type    = each.value.type
+  records = [each.value.record]
+  ttl     = 60
+}
+
+resource "aws_acm_certificate_validation" "cert" {
+  certificate_arn         = aws_acm_certificate.cert.arn
+  validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
+}
+
+# Route 53 CNAME Record
+resource "aws_route53_record" "cname" {
+  zone_id = var.route53_zone_id
+  name    = "group-3-backend-${var.branch_name}.sctp-sandbox.com"
+  type    = "CNAME"
+  ttl     = 60
+  records = [aws_lb.main.dns_name]
+}
