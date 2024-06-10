@@ -283,3 +283,124 @@ resource "aws_ecs_service" "netflix_clone_service" {
     aws_lb_listener.main
   ]
 }
+
+# CloudWatch Log Group
+# The Log Group to store ECS logs in CloudWatch.
+resource "aws_cloudwatch_log_group" "ecs_log_group" {
+  name              = "/ecs/group-3-${var.branch_name}"
+  retention_in_days = 7
+}
+
+# VPC Endpoint for ECR
+# Allows the ECS tasks to pull images from ECR privately.
+resource "aws_vpc_endpoint" "ecr" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.us-east-1.ecr.api"
+  subnet_ids        = [aws_subnet.private1.id, aws_subnet.private2.id]
+  security_group_ids = [aws_security_group.main.id]
+  vpc_endpoint_type = "Interface"
+
+  tags = {
+    Name = "group-3-ep-ecr-${var.branch_name}"
+  }
+}
+
+# VPC Endpoint for ECR Docker
+# Allows the ECS tasks to pull images from ECR Docker privately.
+resource "aws_vpc_endpoint" "ecr_dkr" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.us-east-1.ecr.dkr"
+  subnet_ids        = [aws_subnet.private1.id, aws_subnet.private2.id]
+  security_group_ids = [aws_security_group.main.id]
+  vpc_endpoint_type = "Interface"
+  tags = {
+    Name = "group-3-ep-ecrdkr-${var.branch_name}"
+  }
+}
+
+# NAT Gateway
+# Allows instances in the private subnets to access the internet.
+resource "aws_eip" "nat" {
+  vpc = true
+  tags = {
+    Name = "group-3-eip-${var.branch_name}"
+  }
+}
+
+resource "aws_nat_gateway" "nat" {
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.public1.id
+  tags = {
+    Name = "group-3-nat-gw-${var.branch_name}"
+  }
+}
+
+# Private Route Table
+# Route table for private subnets to route traffic through the NAT Gateway.
+resource "aws_route_table" "private" {
+  vpc_id = aws_vpc.main.id
+
+  route {
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.nat.id
+  }
+
+  tags = {
+    Name = "group-3-private-rt-${var.branch_name}"
+  }
+}
+
+# Associate Private Subnets with Private Route Table
+resource "aws_route_table_association" "private1" {
+  subnet_id      = aws_subnet.private1.id
+  route_table_id = aws_route_table.private.id
+}
+
+resource "aws_route_table_association" "private2" {
+  subnet_id      = aws_subnet.private2.id
+  route_table_id = aws_route_table.private.id
+}
+
+# ACM Certificate
+resource "aws_acm_certificate" "cert" {
+  domain_name       = "group-3-backend-${var.branch_name}.sctp-sandbox.com"
+  validation_method = "DNS"
+  
+  subject_alternative_names = [
+    "group-3-backend-${var.branch_name}.sctp-sandbox.com",
+  ]
+
+  tags = {
+    Name = "group-3-backend-${var.branch_name}"
+  }
+}
+
+resource "aws_route53_record" "cert_validation" {
+  for_each = {
+    for dvo in aws_acm_certificate.cert.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      type   = dvo.resource_record_type
+      record = dvo.resource_record_value
+    }
+  }
+  
+  zone_id = var.route53_zone_id
+  name    = each.value.name
+  type    = each.value.type
+  records = [each.value.record]
+  ttl     = 60
+}
+
+resource "aws_acm_certificate_validation" "cert" {
+  certificate_arn         = aws_acm_certificate.cert.arn
+  validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
+}
+
+# Route 53 CNAME Record
+resource "aws_route53_record" "cname" {
+  zone_id = var.route53_zone_id
+  name    = "group-3-backend-${var.branch_name}.sctp-sandbox.com"
+  type    = "CNAME"
+  ttl     = 60
+  records = [aws_lb.main.dns_name]
+}
