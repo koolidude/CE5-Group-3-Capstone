@@ -7,7 +7,7 @@ on:
       - prod
       - uat
       - dev
-    #   - feature-*
+      - feature-*
     paths:
       - 'frontend/**'
       - 'infrastructure/terraform/frontend/**'
@@ -107,3 +107,4 @@ jobs:
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ steps.cloudfront.outputs.distribution_id }} --paths "/*"
+          aws-region: us-east-1
