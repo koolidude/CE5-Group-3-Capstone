@@ -16,5 +16,15 @@ def get_movies():
     response = requests.get(f"https://api.themoviedb.org/3/movie/popular?api_key={Config.TMDB_API_KEY}")
     return jsonify(response.json())
 
+@app.route('/movies/top-rated')
+def get_top_rated_movies():
+    response = requests.get(f"https://api.themoviedb.org/3/movie/top_rated?api_key={Config.TMDB_API_KEY}")
+    return jsonify(response.json())
+
+@app.route('/movies/upcoming')
+def get_upcoming_movies():
+    response = requests.get(f"https://api.themoviedb.org/3/movie/upcoming?api_key={Config.TMDB_API_KEY}")
+    return jsonify(response.json())
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
