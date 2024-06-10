@@ -16,7 +16,7 @@ class MainTestCase(unittest.TestCase):
         result = self.app.get('/movies')
         self.assertEqual(result.status_code, 200)
 
-          def test_get_top_rated_movies(self):
+    def test_get_top_rated_movies(self):
         result = self.app.get('/movies/top-rated')
         self.assertEqual(result.status_code, 200)
 
