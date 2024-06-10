@@ -78,3 +78,43 @@ resource "aws_s3_bucket_policy" "frontend_bucket_policy" {
     ]
   })
 }
+# CloudFront distribution for serving the frontend content
+resource "aws_cloudfront_distribution" "frontend" {
+  origin {
+    domain_name = aws_s3_bucket.frontend.bucket_regional_domain_name
+    origin_id   = "S3-${aws_s3_bucket.frontend.id}"
+  }
+
+  enabled             = true
+  is_ipv6_enabled     = true
+  default_root_object = "index.html"
+
+  default_cache_behavior {
+    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = "S3-${aws_s3_bucket.frontend.id}"
+
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+
+  viewer_certificate {
+    cloudfront_default_certificate = true
+  }
+
+  tags = {
+    Name = "group-3-cloudfront-${var.branch_name}"
+  }
+}
