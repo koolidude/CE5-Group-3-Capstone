@@ -367,11 +367,11 @@ resource "aws_acm_certificate" "cert" {
   validation_method = "DNS"
   
   subject_alternative_names = [
-    "group-3-backend-${var.branch_name}.sctp-sandbox.com",
+    "group-3-backend.sctp-sandbox.com",
   ]
 
   tags = {
-    Name = "group-3-backend-${var.branch_name}"
+    Name = "group-3-backend"
   }
 }
 
@@ -404,3 +404,5 @@ resource "aws_route53_record" "cname" {
   ttl     = 60
   records = [aws_lb.main.dns_name]
 }
+
+#TEST
