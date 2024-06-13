@@ -14,9 +14,69 @@ on:
 
 jobs:
   
+  code-unit-testing:
+    runs-on: ubuntu-latest
+    #needs: [build-frontend]
+    steps:  
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+           node-version: '14'
+        - name: Install dependencies
+          run: npm install
+          working-directory: frontend
+        - name: Run tests
+          run: npm test
+          working-directory: frontend
+  # code-vulnerability-scanning:
+    #  runs-on: ubuntu-latest
+    #  needs: [code-unit-testing]
+    #  outputs:
+      # status: ${{ job.status }}
+    #  steps:
+        # - name: Check out repository code
+          # uses: actions/checkout@v4.1.5
+        # - name: Install Snyk CLI
+          # run: npm install -g snyk
+        # - name: Run Snyk to check for vulnerabilities
+          # env:
+            # SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          # run: | 
+            # cd frontend
+            # snyk test --severity-threshold=high --skip-unresolved
+            # snyk test --severity-threshold=high --json > snyk-results.json
+        # - name: Upload Snyk Scan Results
+          # uses: actions/upload-artifact@v4.3.0
+          # with:
+            # name: snyk-scan-results
+            # path: snyk-results.json
+                # 
+  # iac-vulnerability-scanning:
+    # runs-on: ubuntu-latest
+    # needs: [code-unit-testing,code-vulnerability-scanning]
+    # outputs:
+      # status: ${{ job.status }}
+    # steps:
+      # - name: Check out repository code
+        # uses: actions/checkout@v4.1.5
+      # - name: Install Snyk CLI
+        # run: npm install -g snyk
+      # - name: Run Snyk Code Scan And Check Snyk Scan Results
+        # env:
+          # SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        # run: |
+          # snyk iac test --severity-threshold=critical
+          # snyk iac test --severity-threshold=critical --json > snyk_iac_report.json
+      # - name: Upload Snyk IaC Report
+        # uses: actions/upload-artifact@v4.3.0
+        # with:
+          # name: snyk-iac-report
+          # path: snyk_iac_report.json            
   build-frontend:
     runs-on: ubuntu-latest
-
+    # needs: [code-unit-testing,code-vulnerability-scanning,iac-vulnerability-scanning]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -33,10 +93,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: frontend
-
-      - name: Run tests
-        run: npm test
         working-directory: frontend
 
       - name: Build frontend
