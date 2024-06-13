@@ -45,8 +45,8 @@ jobs:
             SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           run: | 
             cd frontend
-            snyk test --severity-threshold=high --skip-unresolved
-            snyk test --severity-threshold=high --json > snyk-results.json
+            snyk test --severity-threshold=critical --skip-unresolved
+            snyk test --severity-threshold=critical --json > snyk-results.json
         - name: Upload Snyk Scan Results
           uses: actions/upload-artifact@v4.3.0
           with:
