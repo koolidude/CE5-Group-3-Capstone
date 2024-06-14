@@ -11,11 +11,11 @@ Number associated with harmony, wisdom and understanding
 
 ## Netflix Clone.. Like...
 
-Welcome to the "Notflix" Clone Project, where we pretend to be Netflix but with a lot more AWS wizardry and a sprinkle of humor!
+Welcome to the **"Notflix"** Clone Project, where we pretend to be Netflix but with a lot more **AWS** wizardry and a sprinkle of humor!
 
-Our mission? To create a Notflix clone using a whole arsenal of AWS goodies like ECR, ECS, S3, and CloudFront. We’re also throwing in Docker and Terraform because why not? The backend is powered by Flask and the TMDB API, while the frontend is all about that React magic.
+Our mission? To create a **Notflix** clone using a whole arsenal of **AWS** goodies like ECR, ECS, S3, and CloudFront. We’re also throwing in **Docke** and **Terraform** because why not? The backend is powered by **Flask** and the **TMDB API**, while the frontend is all about that **React** magic.
 
-But wait, there's more! We've set up a super slick CI/CD pipeline using GitHub Actions to make sure our deployment process is smoother than a freshly buttered popcorn. So sit back, relax, and get ready to binge-watch our progress (and hopefully not our mistakes) as we bring this clone to life!
+But wait, there's more! We've set up a super slick **CI/CD** pipeline using **GitHub Actions** to make sure our deployment process is smoother than a freshly buttered popcorn. So sit back, relax, and get ready to binge-watch our progress (and hopefully not our mistakes) as we bring this clone to life!
 
 or
 
@@ -65,6 +65,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 
 ## What do we use...
 
+
 ## GitHub Branching Strategies
 
 ## Show-and-tell Time...
@@ -77,3 +78,6 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 ## Wised-Up Moments
 
 ## Get-Your-Geek-On Guide
+
+## Nuke-It-From-Orbit Instructions
+
