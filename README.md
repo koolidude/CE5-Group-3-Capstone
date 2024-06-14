@@ -190,7 +190,7 @@ We employ a structured branching strategy to manage development and deployment e
 
 ## The Big Reveal
 
-### Backend - TMDB API - movies
+### Backend = TMDB API - movies
 ![alt text](infrastructure/diagrams/backend-movies.png)
 
 ### Backend = TMDB API - movies/top-rated
@@ -210,3 +210,18 @@ We employ a structured branching strategy to manage development and deployment e
 
 ### Backend = YOUTUBE API - youtube/search/<query>
 ![alt text](infrastructure/diagrams/backend-youtube-search-query.png)
+
+### Frontend = home
+![alt text](infrastructure/diagrams/frontend-output-home.png)
+
+### Frontend = top-rated
+![alt text](infrastructure/diagrams/frontend-output-top-rated.png)
+
+### Frontend = upcoming
+![alt text](infrastructure/diagrams/frontend-output-upcoming.png)
+
+### Frontend = genre-genreid
+![alt text](infrastructure/diagrams/frontend-output-genre-genreid.png)
+
+### Frontend = movies-search-query
+![alt text](infrastructure/diagrams/frontend-output-movies-search-query.png)
