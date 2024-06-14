@@ -180,31 +180,14 @@ We employ a structured branching strategy to manage development and deployment e
 3. End Product - Anyone
 
 ## Epic Battles
-1. **Dockerfile Dilemmas**:
-   - **Challenge**: Ensuring the Docker images for both the frontend and backend were built correctly and ran seamlessly.
-   - **Solution**: Tweaking the Dockerfiles to ensure all dependencies were correctly installed and the apps ran without hiccups. This included resolving issues with mismatched dependencies and environment variables.
-
-2. **CI/CD Circus**:
-   - **Challenge**: Setting up the CI/CD pipelines to automate the build, test, and deployment processes.
-   - **Solution**: Crafting robust GitHub Actions workflows that included steps for linting, testing, building Docker images, pushing to ECR, and deploying to ECS. Debugging the YAML syntax and ensuring all secrets and environment variables were correctly configured.
-
-3. **Terraform Terrors**:
-   - **Challenge**: Writing Terraform scripts that correctly provisioned the AWS resources needed for both the frontend and backend.
-   - **Solution**: Iterating on the Terraform configurations to handle dependencies between resources, managing state files, and ensuring idempotency. Troubleshooting common issues like resource name conflicts and incorrect configurations.
-
-4. **Route 53 Riddles**:
-   - **Challenge**: Setting up DNS configurations to route traffic correctly to the CloudFront and ALB distributions.
-   - **Solution**: Carefully configuring Route 53 records, validating domain names, and ensuring proper SSL certificate validation with ACM. Testing and validating the DNS propagation.
-
-5. **ECS Enigmas**:
-   - **Challenge**: Ensuring the ECS tasks and services were correctly configured and communicated as expected.
-   - **Solution**: Fine-tuning the task definitions, adjusting resource allocations, and setting up proper networking configurations. Using CloudWatch logs to monitor and debug issues with ECS tasks.
-
-
-6. **Logging and Monitoring Mysteries**:
-    - **Challenge**: Setting up logging and monitoring to track application performance and issues.
-    - **Solution**: Using CloudWatch for monitoring ECS tasks, setting up alarms for critical metrics, and ensuring logs were structured and useful for debugging.
-
+| **Challenge**                | **Description**                                                                                                                                                                 | **Solution**                                                                                                                                                                                                                           |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dockerfile Dilemmas**      | Ensuring the Docker images for both the frontend and backend were built correctly and ran seamlessly.                                                                            | Tweaking the Dockerfiles to ensure all dependencies were correctly installed and the apps ran without hiccups. This included resolving issues with mismatched dependencies and environment variables.                                  |
+| **CI/CD Circus**             | Setting up the CI/CD pipelines to automate the build, test, and deployment processes.                                                                                           | Crafting robust GitHub Actions workflows that included steps for linting, testing, building Docker images, pushing to ECR, and deploying to ECS. Debugging the YAML syntax and ensuring all secrets and environment variables were correctly configured. |
+| **Terraform Terrors**        | Writing Terraform scripts that correctly provisioned the AWS resources needed for both the frontend and backend.                                                                 | Iterating on the Terraform configurations to handle dependencies between resources, managing state files, and ensuring idempotency. Troubleshooting common issues like resource name conflicts and incorrect configurations.            |
+| **Route 53 Riddles**         | Setting up DNS configurations to route traffic correctly to the CloudFront and ALB distributions.                                                                               | Carefully configuring Route 53 records, validating domain names, and ensuring proper SSL certificate validation with ACM. Testing and validating the DNS propagation.                                                                  |
+| **ECS Enigmas**              | Ensuring the ECS tasks and services were correctly configured and communicated as expected.                                                                                     | Fine-tuning the task definitions, adjusting resource allocations, and setting up proper networking configurations. Using CloudWatch logs to monitor and debug issues with ECS tasks.                                                  |
+| **Logging and Monitoring Mysteries** | Setting up logging and monitoring to track application performance and issues. | Using CloudWatch for monitoring ECS tasks, setting up alarms for critical metrics, and ensuring logs were structured and useful for debugging. |"
 
 ## Wised-Up Moments
 | Lesson | Description |
