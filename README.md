@@ -41,3 +41,5 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 ## Epic Battles
 
 ## Wised-Up Moments
+
+## Get-Your-Geek-On Guide
