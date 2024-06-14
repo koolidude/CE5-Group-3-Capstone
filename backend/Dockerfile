@@ -21,5 +21,3 @@ ENV NAME World
 
 # Run main.py when the container launches
 CMD ["python", "src/main.py"]
-
-# Test
