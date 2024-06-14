@@ -58,7 +58,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 5. Implement additional features and enhancements.
 
 ## How would we want it to be...
-![alt text](infrastructure/diagrams/Group-3-Capstone-Page-5.webp)
+![alt text](infrastructure/diagrams/Diagram1.png)
 
 ## How it is now... We think...
 
