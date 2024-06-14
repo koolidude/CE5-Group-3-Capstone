@@ -93,3 +93,4 @@ test('genre navigation functionality', async () => {
   await waitFor(() => expect(screen.getByText('Genre Movie 1')).toBeInTheDocument());
   expect(screen.getByText('Genre Movie 2')).toBeInTheDocument();
 });
+
