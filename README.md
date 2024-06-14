@@ -60,7 +60,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 Idea is there... but we dont fulfil all.. hope you understand..
 
 ## How would we want it to be...
-![alt text](infrastructure/diagrams/Diagram1.png)
+![alt text](infrastructure/diagrams/Diagram1-1.png)
 
 ## The Reality...
 ![alt text](infrastructure/diagrams/Diagram2.png)
