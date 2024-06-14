@@ -96,7 +96,36 @@ Idea is there... but we dont fulfil all.. hope you understand..
 ## GitHub Branching Strategies
 ![alt text](infrastructure/diagrams/Diagram3.png)
 
+We employ a structured branching strategy to manage development and deployment efficiently:
 
+1. **Main Branches**:
+    - **prod**: Contains the production-ready code. Only thoroughly tested and stable code is merged here.
+    - **uat**: Used for final pre-production testing. Code from the `dev` branch is merged here for User Acceptance Testing.
+    - **dev**: Main development branch. Stable code that has passed initial tests is merged here. 
+
+2. **Feature Branches**:
+    - **feature**: Used for developing new features or bug fixes. Each new feature or bug fix has its own branch, created from the `dev` branch.
+
+#### Branching Workflow
+
+1. **Feature Branch**:
+   - Created from `dev` to work on new features or bug fixes.
+   - Naming convention: `feature/<feature-name>`.
+
+2. **Develop and Test**:
+   - Code and initial tests are done in the feature branch.
+
+3. **Merge to dev**:
+   - Once stable, feature branches are merged into `dev`.
+   - CI/CD pipeline tests and deploys to the development environment.
+
+4. **Promote to uat**:
+   - After thorough testing, changes are merged into `uat`.
+   - Deploys to the UAT environment for final testing.
+
+5. **Release to prod**:
+   - Upon successful UAT, changes are merged into `prod`.
+   - Deploys to production.
 
 ## Show-and-tell Time...
 1. CICD Backend - Malik and Wutyee
