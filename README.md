@@ -29,33 +29,12 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 4. Mohamed Malik - (Backend Developer) - Salary ****
 
 ## What we think we should do...
-###(Project Manager and DevOps Lead):
-1. Oversee the project and ensure milestones are met.
-2. Set up and manage the CI/CD pipeline.
-3. Configure and manage AWS resources.
-4. Implement Terraform scripts for infrastructure as code.
-5. Monitor project progress and handle any roadblocks.
-
-###(Backend Developer):
-1. Develop and maintain the Flask backend.
-2. Integrate TMDB API with the backend.
-3. Implement user authentication and authorization.
-4. Write unit tests for the backend.
-5. Ensure API security and performance optimization.
-
-###(Frontend Developer):
-1. Develop and maintain the React frontend.
-2. Integrate frontend with the backend API.
-3. Ensure responsive design and user-friendly interface.
-4. Write unit tests for the frontend.
-5. Handle UI/UX improvements based on feedback.
-
-###(Full Stack Developer):
-1. Assist with both backend and frontend development.
-2. Ensure smooth integration between frontend and backend.
-3. Write integration tests and conduct end-to-end testing.
-4. Assist with deployment and troubleshooting.
-5. Implement additional features and enhancements.
+| **Role**                      | **Responsibilities**                                                                                                                                                                                                                                              |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Project Manager and DevOps Wizard** | - Oversee the project and keep everyone in line (herding cats, basically). <br> - Set up and manage the magical CI/CD pipeline. <br> - Tame and configure the wild AWS resources. <br> - Cast Terraform spells for infrastructure as code. <br> - Monitor project progress and fix roadblocks (aka monster slaying). |
+| **Backend Sorcerer**         | - Conjure and maintain the Flask backend. <br> - Integrate the mystical TMDB API with the backend. <br> - Implement user authentication and authorization (keeping out trolls). <br> - Write unit tests for the backend (making sure the spells work). <br> - Ensure API security and performance optimization (no goblins allowed). |
+| **Frontend Wizard**        | - Develop and maintain the React frontend (making it look pretty). <br> - Integrate frontend with the backend API (abracadabra!). <br> - Ensure responsive design and user-friendly interface (fits all magical devices). <br> - Write unit tests for the frontend. <br> - Handle UI/UX improvements based on feedback (because wizards listen). |
+| **Full Stack Jester**      | - Assist with both backend and frontend development (jack of all trades). <br> - Ensure smooth integration between frontend and backend (like peanut butter and jelly). <br> - Write integration tests and conduct end-to-end testing (dotting i’s and crossing t’s). <br> - Assist with deployment and troubleshooting (no jesting around). <br> - Implement additional features and enhancements (because why not?). |
 
 Idea is there... but we dont fulfil all.. hope you understand..
 
