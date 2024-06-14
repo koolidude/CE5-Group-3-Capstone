@@ -1,4 +1,5 @@
-# Our Capstone Project... Group.. Number 3... associated with Harmony, Wisdom and Understanding
+# Our Capstone Project... Group.. 3...
+Associated with harmony, wisdom and understanding
 
 ## Netflix Clone.. Like...
 
