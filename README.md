@@ -50,6 +50,13 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 4. Write unit tests for the frontend.
 5. Handle UI/UX improvements based on feedback.
 
+###(Full Stack Developer):
+1. Assist with both backend and frontend development.
+2. Ensure smooth integration between frontend and backend.
+3. Write integration tests and conduct end-to-end testing.
+4. Assist with deployment and troubleshooting.
+5. Implement additional features and enhancements.
+
 ## How would we want it to be...
 
 ## How it is now... We think...
@@ -63,7 +70,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 ## Show-and-tell Time...
 1. CICD Backend - Malik and Wutyee
 2. CICD Frontend - Tarmizi and Wutyee
-3. End Product - Shukri
+3. End Product - Anyone
 
 ## Epic Battles
 
