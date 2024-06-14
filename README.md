@@ -28,20 +28,30 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 3. Hnin Wut Yee - (Full Stack Developer) - Salary ****
 4. Mohamed Malik - (Backend Developer) - Salary ****
 
+## What think we should do...
+###(Project Manager and DevOps Lead):
+1. Oversee the project and ensure milestones are met.
+2. Set up and manage the CI/CD pipeline.
+3. Configure and manage AWS resources (API Gateway, ECS, ECR, Secrets Manager).
+4. Implement Terraform scripts for infrastructure as code.
+5. Monitor project progress and handle any roadblocks.
+
 ## How would we want it to be...
 
 ## How it is now... We think...
 
 ## The Reality...
 
-## What we use...
+## What do we use...
+
+## GitHub Branching Strategies
 
 ## Show-and-tell Time...
 1. CICD Backend - Malik and Wutyee
 2. CICD Frontend - Tarmizi and Wutyee
+3. End Product - Shukri
 
 ## Epic Battles
-
 
 ## Wised-Up Moments
 
