@@ -183,7 +183,7 @@ We employ a structured branching strategy to manage development and deployment e
 | **Team Collaboration** | Working as a team on this project highlighted the importance of clear communication, task delegation, and version control for successful collaborative development. |
 
 ## Get-Your-Geek-On Guide
-[Click here](infrastructure\docs\setup-instructions.md)
+[Click here](infrastructure/docs/setup-instructions.md)
 
 ## Nuke-It-From-Orbit Instructions
 [Click here](infrastructure/docs/destroy-instructions.md)
