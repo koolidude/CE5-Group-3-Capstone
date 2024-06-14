@@ -37,3 +37,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 ## What we use...
 
 ## Show-and-tell Time...
+
+## Epic Battles
+
+## Wised-Up Moments
