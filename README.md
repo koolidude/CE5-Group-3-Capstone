@@ -16,6 +16,11 @@ Our mission? To create a Notflix clone using a whole arsenal of AWS goodies like
 
 But wait, there's more! We've set up a super slick CI/CD pipeline using GitHub Actions to make sure our deployment process is smoother than a freshly buttered popcorn. So sit back, relax, and get ready to binge-watch our progress (and hopefully not our mistakes) as we bring this clone to life!
 
+or
+
+The project aims to develop a Netflix clone using various AWS resources (AWS Parameter Store, ECR, ECS, and S3), Docker, Terraform, API Gateway . The application includes both backend and frontend components. The backend is built with Flask and the TMDB API, while the frontend is built with React. The project involves setting up a CI/CD pipeline to automate the deployment process.
+
+
 ## Our role play... Dont judge us...
 1. Nor Shukri - 
 2. Muhammad Tarmizi
