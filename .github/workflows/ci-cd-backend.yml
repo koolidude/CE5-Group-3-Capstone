@@ -150,8 +150,6 @@ jobs:
       - name: Build and push Docker image
         run: |
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com
-          docker build -t netflix_clone_backend .
-          docker tag netflix_clone_backend:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/group-3-ecr-repo-${{ github.ref_name }}:latest
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/group-3-ecr-repo-${{ github.ref_name }}:latest
         working-directory: backend
 

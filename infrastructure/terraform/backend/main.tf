@@ -411,5 +411,3 @@ resource "aws_route53_record" "cname" {
 
 #TEST
 #test
-#test
-#TEST
