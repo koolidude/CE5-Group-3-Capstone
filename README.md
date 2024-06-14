@@ -66,32 +66,42 @@ Idea is there... but we dont fulfil all.. hope you understand..
 ![alt text](infrastructure/diagrams/Diagram2.png)
 
 ## What do we use...
+
+**Frontend Resources:**
+1. **React App**: The frontend application built with React.
+2. **S3 Bucket**: Stores the static files for the React frontend application.
+3. **CloudFront Distribution**: Caches and serves the frontend application content from S3.
+4. **Route 53**: DNS service to route traffic to the CloudFront distribution.
+
+**Backend Resources:**
+1. **Flask API**: The backend application built with Flask.
+2. **TMDB API**: External API used by the backend to fetch movie data.
+3. **YouTube API**: External API used by the backend to fetch YouTube data.
+4. **ECR**: Amazon Elastic Container Registry to store Docker images.
+5. **ECS Cluster**: Amazon Elastic Container Service cluster to manage Docker containers.
+6. **ECS Service**: Manages the running of ECS tasks.
+7. **ECS Task**: The Docker container running the Flask API.
+8. **Application Load Balancer (ALB)**: Distributes incoming application traffic across multiple targets (ECS tasks). Uses SSL certificates from ACM.
+9. **Target Group (TG)**: A group of ECS tasks registered with the ALB to receive traffic.
+10. **CloudWatch Logs**: Monitors and logs the ECS task activities.
+11. **ACM**: AWS Certificate Manager used to manage SSL/TLS certificates for securing traffic.
+12. **Route 53**: DNS service to route traffic to the ALB.
+
+**Common Resources:**
 1. **GitHub**: The source code repository where the code for the application resides.
 2. **GitHub Actions**: The CI/CD pipeline tool used to automate the build, test, and deployment processes.
-3. **AWS VPC**: The virtual network within AWS that hosts all the AWS resources.
-4. **Internet Gateway (IGW)**: Enables internet access for resources within the VPC.
-5. **Public Route Table (RT)**: Manages the routing for the public subnets within the VPC.
-6. **Public Subnets**: Subnets with direct access to the internet.
-7. **Private Route Table (PrivateRT)**: Manages the routing for the private subnets within the VPC.
-8. **Private Subnets**: Subnets without direct internet access, using a NAT gateway for outbound connections.
-9. **NAT Gateway**: Provides internet access for resources in the private subnets.
-10. **Application Load Balancer (ALB)**: Distributes incoming application traffic across multiple targets (ECS tasks). Uses SSL certificates from ACM.
-11. **Target Group (TG)**: A group of ECS tasks registered with the ALB to receive traffic.
-12. **Route 53**: DNS service to route traffic to the ALB and CloudFront distribution.
-13. **ECR**: Amazon Elastic Container Registry to store Docker images.
-14. **ECS Cluster**: Amazon Elastic Container Service cluster to manage Docker containers.
-15. **ECS Service**: Manages the running of ECS tasks.
-16. **ECS Task**: The Docker container running the Flask API.
-17. **CloudWatch Logs**: Monitors and logs the ECS task activities.
-18. **S3 Bucket**: Stores the static files for the React frontend application.
-19. **CloudFront Distribution**: Caches and serves the frontend application content from S3.
-20. **Flask API**: The backend application built with Flask.
-21. **TMDB API**: External API used by the backend to fetch movie data.
-22. **YouTube API**: External API used by the backend to fetch YouTube data.
-23. **React App**: The frontend application built with React.
-24. **Terraform**: Infrastructure as Code tool used to provision and manage AWS resources.
-25. **ACM**: AWS Certificate Manager used to manage SSL/TLS certificates for securing traffic.
-26. **End User Device**: The device used by the end user to access the application.
+3. **Terraform**: Infrastructure as Code tool used to provision and manage AWS resources.
+4. **AWS VPC**: The virtual network within AWS that hosts all the AWS resources.
+5. **Internet Gateway (IGW)**: Enables internet access for resources within the VPC.
+6. **Public Route Table (RT)**: Manages the routing for the public subnets within the VPC.
+7. **Public Subnets**: Subnets with direct access to the internet.
+8. **Private Route Table (PrivateRT)**: Manages the routing for the private subnets within the VPC.
+9. **Private Subnets**: Subnets without direct internet access, using a NAT gateway for outbound connections.
+10. **NAT Gateway**: Provides internet access for resources in the private subnets.
+
+**End User Device:**
+1. **End User Device**: The device used by the end user to access the application.
+
 
 ## GitHub Branching Strategies
 ![alt text](infrastructure/diagrams/Diagram3.png)
