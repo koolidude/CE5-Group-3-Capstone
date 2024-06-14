@@ -94,6 +94,9 @@ Idea is there... but we dont fulfil all.. hope you understand..
 26. **End User Device**: The device used by the end user to access the application.
 
 ## GitHub Branching Strategies
+![alt text](infrastructure/diagrams/Diagram3.png)
+
+
 
 ## Show-and-tell Time...
 1. CICD Backend - Malik and Wutyee
