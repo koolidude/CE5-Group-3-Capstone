@@ -212,3 +212,45 @@ We employ a structured branching strategy to manage development and deployment e
 
 ## Nuke-It-From-Orbit Instructions
 
+<div class="lessons-learned">
+  <div class="lesson">
+    <h3>Effective API Integration</h3>
+    <p>Importance of robust error handling and retry mechanisms when integrating with third-party APIs to manage rate limits and downtime.</p>
+  </div>
+  <div class="lesson">
+    <h3>Infrastructure as Code (IaC)</h3>
+    <p>Using Terraform for managing AWS resources provided a deeper understanding of IaC principles and the benefits of automating infrastructure deployment.</p>
+  </div>
+  <div class="lesson">
+    <h3>CI/CD Best Practices</h3>
+    <p>Implementing a CI/CD pipeline with GitHub Actions highlighted the importance of automation in ensuring consistent and reliable application deployments.</p>
+  </div>
+  <div class="lesson">
+    <h3>Docker Proficiency</h3>
+    <p>Building and running Docker containers for both frontend and backend applications enhanced our skills in containerization and efficient environment management.</p>
+  </div>
+  <div class="lesson">
+    <h3>Secrets Management</h3>
+    <p>Securely managing API keys and sensitive information taught us the best practices for using tools like GitHub Secrets and AWS Secrets Manager.</p>
+  </div>
+  <div class="lesson">
+    <h3>Cross-Origin Resource Sharing (CORS)</h3>
+    <p>Handling CORS issues between the frontend and backend reinforced the importance of proper configuration to ensure smooth communication between different application components.</p>
+  </div>
+  <div class="lesson">
+    <h3>DNS and SSL Configuration</h3>
+    <p>Setting up Route 53 DNS records and managing SSL certificates with ACM emphasized the critical role of DNS management and security in web applications.</p>
+  </div>
+  <div class="lesson">
+    <h3>ECS Configuration and Monitoring</h3>
+    <p>Configuring ECS tasks and services, along with setting up CloudWatch logs, provided valuable insights into the operational aspects of running containerized applications in AWS.</p>
+  </div>
+  <div class="lesson">
+    <h3>State Management in React</h3>
+    <p>Implementing state management using React hooks and context improved our ability to maintain a consistent and responsive user interface.</p>
+  </div>
+  <div class="lesson">
+    <h3>Team Collaboration</h3>
+    <p>Working as a team on this project highlighted the importance of clear communication, task delegation, and version control for successful collaborative development.</p>
+  </div>
+</div>
