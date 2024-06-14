@@ -1,7 +1,7 @@
 # Our Capstone Project... Group.. 3...
 Associated with harmony, wisdom and understanding
 
-## Team Members
+## Cast Members
 
 1. Nor Shukri
 2. Muhammad Tarmizi
