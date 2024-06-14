@@ -37,8 +37,11 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 ## What we use...
 
 ## Show-and-tell Time...
+1. CICD Backend - Malik and Wutyee
+2. CICD Frontend - Tarmizi and Wutyee
 
 ## Epic Battles
+
 
 ## Wised-Up Moments
 
