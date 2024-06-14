@@ -1,5 +1,6 @@
 # Our Capstone Project... Group.. 3...
-Associated with harmony, wisdom and understanding
+
+Number associated with harmony, wisdom and understanding
 
 ## Cast Members
 
@@ -21,11 +22,11 @@ or
 The project aims to develop a Netflix clone using various AWS resources (AWS Parameter Store, ECR, ECS, and S3), Docker, Terraform, API Gateway . The application includes both backend and frontend components. The backend is built with Flask and the TMDB API, while the frontend is built with React. The project involves setting up a CI/CD pipeline to automate the deployment process.
 
 
-## Our role play... Dont judge us...
-1. Nor Shukri - 
-2. Muhammad Tarmizi
-3. Hnin Wut Yee
-4. Mohamed Malik
+## Our role play... Dont judge us... Though we dont live up to it...
+1. Nor Shukri - (Project Manager and DevOps Lead) - Salary ****
+2. Muhammad Tarmizi - (Frontend Developer) - Salary ****
+3. Hnin Wut Yee - (Full Stack Developer) - Salary ****
+4. Mohamed Malik - (Backend Developer) - Salary ****
 
 ## How would we want it to be...
 
