@@ -187,3 +187,26 @@ We employ a structured branching strategy to manage development and deployment e
 
 ## Nuke-It-From-Orbit Instructions
 [Click here](infrastructure/docs/destroy-instructions.md)
+
+## The Big Reveal
+
+### Backend - TMDB API - movies
+![alt text](infrastructure/diagrams/backend-movies.png)
+
+### Backend = TMDB API - movies/top-rated
+![alt text](infrastructure/diagrams/backend-movies-top-rated.png)
+
+### Backend = TMDB API - movies/upcoming
+![alt text](infrastructure/diagrams/backend-movies-upcoming.png)
+
+### Backend = TMDB API - movie/<movieid>
+![alt text](infrastructure/diagrams/backend-movie-movieid.png)
+
+### Backend = TMDB API - movies/genre/<genreid>
+![alt text](infrastructure/diagrams/backend-movies-genre-genreid.png)
+
+### Backend = TMDB API - movies/search/<query>
+![alt text](infrastructure/diagrams/backend-movies-search-query.png)
+
+### Backend = YOUTUBE API - youtube/search/<query>
+![alt text](infrastructure/diagrams/backend-youtube-search-query.png)
