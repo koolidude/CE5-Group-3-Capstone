@@ -186,4 +186,4 @@ We employ a structured branching strategy to manage development and deployment e
 [Click here](infrastructure\docs\setup-instructions.md)
 
 ## Nuke-It-From-Orbit Instructions
-
+[Click here](infrastructure/docs/destroy-instructions.md)
