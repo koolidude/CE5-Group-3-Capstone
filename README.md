@@ -28,13 +28,27 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 3. Hnin Wut Yee - (Full Stack Developer) - Salary ****
 4. Mohamed Malik - (Backend Developer) - Salary ****
 
-## What think we should do...
+## What we think we should do...
 ###(Project Manager and DevOps Lead):
 1. Oversee the project and ensure milestones are met.
 2. Set up and manage the CI/CD pipeline.
-3. Configure and manage AWS resources (API Gateway, ECS, ECR, Secrets Manager).
+3. Configure and manage AWS resources.
 4. Implement Terraform scripts for infrastructure as code.
 5. Monitor project progress and handle any roadblocks.
+
+###(Backend Developer):
+1. Develop and maintain the Flask backend.
+2. Integrate TMDB API with the backend.
+3. Implement user authentication and authorization.
+4. Write unit tests for the backend.
+5. Ensure API security and performance optimization.
+
+###(Frontend Developer):
+1. Develop and maintain the React frontend.
+2. Integrate frontend with the backend API.
+3. Ensure responsive design and user-friendly interface.
+4. Write unit tests for the frontend.
+5. Handle UI/UX improvements based on feedback.
 
 ## How would we want it to be...
 
