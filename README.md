@@ -36,7 +36,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 | **Frontend Wizard**        | - Develop and maintain the React frontend (making it look pretty). <br> - Integrate frontend with the backend API (abracadabra!). <br> - Ensure responsive design and user-friendly interface (fits all magical devices). <br> - Write unit tests for the frontend. <br> - Handle UI/UX improvements based on feedback (because wizards listen). |
 | **Full Stack Jester**      | - Assist with both backend and frontend development (jack of all trades). <br> - Ensure smooth integration between frontend and backend (like peanut butter and jelly). <br> - Write integration tests and conduct end-to-end testing (dotting i’s and crossing t’s). <br> - Assist with deployment and troubleshooting (no jesting around). <br> - Implement additional features and enhancements (because why not?). |
 
-Idea is there... but we dont fulfil all.. hope you understand..
+Idea is there... but LIFE IS HARD.. hope you understand..
 
 ## How would we want it to be...
 ![alt text](infrastructure/diagrams/Diagram1-1.png)
@@ -183,6 +183,7 @@ We employ a structured branching strategy to manage development and deployment e
 | **Team Collaboration** | Working as a team on this project highlighted the importance of clear communication, task delegation, and version control for successful collaborative development. |
 
 ## Get-Your-Geek-On Guide
+ [Link text]Capstone\CE5-Group-3-Capstone\infrastructure\docs\setup-instructions.md
 
 ## Nuke-It-From-Orbit Instructions
 
