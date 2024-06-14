@@ -102,6 +102,43 @@ Idea is there... but we dont fulfil all.. hope you understand..
 **End User Device:**
 1. **End User Device**: The device used by the end user to access the application.
 
+or
+
+**Frontend Resources:**
+1. **React App**: The snazzy front end of our Netflix clone, where all the binge-watching magic begins.
+2. **S3 Bucket**: The trusty storage locker where we keep all our shiny React app files.
+3. **CloudFront Distribution**: The speedy delivery guy that ensures our React app reaches you faster than you can say ""buffering.""
+4. **Route 53**: The all-knowing GPS that directs traffic to our CloudFront delivery guy.
+
+**Backend Resources:**
+1. **Flask API**: The brainiac behind the scenes, built with Flask, serving up movie data like a pro.
+2. **TMDB API**: Our secret stash for all things movies, providing the data that powers our app.
+3. **YouTube API**: The YouTube guru that fetches all the trending trailers and clips.
+4. **ECR**: The Docker image vault, where we store all our backend goodies.
+5. **ECS Cluster**: The container playground where our backend runs wild.
+6. **ECS Service**: The babysitter that makes sure our backend containers are always up and running.
+7. **ECS Task**: The busy little worker bees, running our Flask API inside their Docker containers.
+8. **Application Load Balancer (ALB)**: The traffic cop that directs incoming requests to the right backend workers. Now with shiny SSL certificates from ACM!
+9. **Target Group (TG)**: The exclusive club of backend workers, ready to serve you.
+10. **CloudWatch Logs**: The gossip column that keeps track of all the backend shenanigans.
+11. **ACM**: The bouncer that manages our SSL/TLS certificates, ensuring only secure traffic gets in.
+12. **Route 53**: The wise old wizard that directs traffic to our ALB.
+
+**Common Resources:**
+1. **GitHub**: Our code hangout spot, where all the cool commits happen.
+2. **GitHub Actions**: The automation wizard that builds, tests, and deploys our app while we kick back and relax.
+3. **Terraform**: The magic wand that provisions and manages our AWS resources with a flick of the wrist.
+4. **AWS VPC**: The virtual fortress where all our AWS resources live.
+5. **Internet Gateway (IGW)**: The gateway to the internet wonderland for our VPC.
+6. **Public Route Table (RT)**: The highway patrol for our public subnets.
+7. **Public Subnets**: The bustling city blocks with direct access to the internet.
+8. **Private Route Table (PrivateRT)**: The secret passageways for our private subnets.
+9. **Private Subnets**: The cozy hideaways without direct internet access, using a NAT gateway for their online needs.
+10. **NAT Gateway**: The secret agent providing internet access for our private subnet dwellers.
+
+**End User Device:**
+1. **End User Device**: Your favorite gadget, ready to stream endless hours of entertainment from our Netflix clone.
+
 
 ## GitHub Branching Strategies
 ![alt text](infrastructure/diagrams/Diagram3.png)
