@@ -11,16 +11,11 @@ Number associated with harmony, wisdom and understanding
 
 ## Netflix Clone.. Like...
 
-Welcome to the **"Notflix"** Clone Project, where we pretend to be Netflix but with a lot more **AWS** wizardry and a sprinkle of humor!
+Welcome to the **"Netflix"** Clone Project, where we pretend to be Netflix but with a lot more **AWS** wizardry and a sprinkle of humor!
 
-Our mission? To create a **Notflix** clone using a whole arsenal of **AWS** goodies like ECR, ECS, S3, and CloudFront. We’re also throwing in **Docke** and **Terraform** because why not? The backend is powered by **Flask** and the **TMDB API**, while the frontend is all about that **React** magic.
+Our mission? To create a **Netflix** clone using a whole arsenal of **AWS** goodies like ECR, ECS, S3, and CloudFront. We’re also throwing in **Docke** and **Terraform** because why not? The backend is powered by **Flask** and the **TMDB API**, while the frontend is all about that **React** magic.
 
 But wait, there's more! We've set up a super slick **CI/CD** pipeline using **GitHub Actions** to make sure our deployment process is smoother than a freshly buttered popcorn. So sit back, relax, and get ready to binge-watch our progress (and hopefully not our mistakes) as we bring this clone to life!
-
-or
-
-The project aims to develop a Netflix clone using various AWS resources (AWS Parameter Store, ECR, ECS, and S3), Docker, Terraform, API Gateway . The application includes both backend and frontend components. The backend is built with Flask and the TMDB API, while the frontend is built with React. The project involves setting up a CI/CD pipeline to automate the deployment process.
-
 
 ## Our role play... Dont judge us... Though we dont live up to it...
 1. Nor Shukri - (Project Manager and DevOps Lead) - Salary ****
@@ -36,7 +31,7 @@ The project aims to develop a Netflix clone using various AWS resources (AWS Par
 | **Frontend Wizard**        | - Develop and maintain the React frontend (making it look pretty). <br> - Integrate frontend with the backend API (abracadabra!). <br> - Ensure responsive design and user-friendly interface (fits all magical devices). <br> - Write unit tests for the frontend. <br> - Handle UI/UX improvements based on feedback (because wizards listen). |
 | **Full Stack Jester**      | - Assist with both backend and frontend development (jack of all trades). <br> - Ensure smooth integration between frontend and backend (like peanut butter and jelly). <br> - Write integration tests and conduct end-to-end testing (dotting i’s and crossing t’s). <br> - Assist with deployment and troubleshooting (no jesting around). <br> - Implement additional features and enhancements (because why not?). |
 
-Idea is there... but LIFE IS HARD.. hope you understand..
+Idea is there...
 
 ## How would we want it to be...
 ![alt text](infrastructure/diagrams/Diagram1-1.png)
@@ -80,44 +75,6 @@ Idea is there... but LIFE IS HARD.. hope you understand..
 
 **End User Device:**
 1. **End User Device**: The device used by the end user to access the application.
-
-or
-
-**Frontend Resources:**
-1. **React App**: The snazzy front end of our Netflix clone, where all the binge-watching magic begins.
-2. **S3 Bucket**: The trusty storage locker where we keep all our shiny React app files.
-3. **CloudFront Distribution**: The speedy delivery guy that ensures our React app reaches you faster than you can say ""buffering.""
-4. **Route 53**: The all-knowing GPS that directs traffic to our CloudFront delivery guy.
-
-**Backend Resources:**
-1. **Flask API**: The brainiac behind the scenes, built with Flask, serving up movie data like a pro.
-2. **TMDB API**: Our secret stash for all things movies, providing the data that powers our app.
-3. **YouTube API**: The YouTube guru that fetches all the trending trailers and clips.
-4. **ECR**: The Docker image vault, where we store all our backend goodies.
-5. **ECS Cluster**: The container playground where our backend runs wild.
-6. **ECS Service**: The babysitter that makes sure our backend containers are always up and running.
-7. **ECS Task**: The busy little worker bees, running our Flask API inside their Docker containers.
-8. **Application Load Balancer (ALB)**: The traffic cop that directs incoming requests to the right backend workers. Now with shiny SSL certificates from ACM!
-9. **Target Group (TG)**: The exclusive club of backend workers, ready to serve you.
-10. **CloudWatch Logs**: The gossip column that keeps track of all the backend shenanigans.
-11. **ACM**: The bouncer that manages our SSL/TLS certificates, ensuring only secure traffic gets in.
-12. **Route 53**: The wise old wizard that directs traffic to our ALB.
-
-**Common Resources:**
-1. **GitHub**: Our code hangout spot, where all the cool commits happen.
-2. **GitHub Actions**: The automation wizard that builds, tests, and deploys our app while we kick back and relax.
-3. **Terraform**: The magic wand that provisions and manages our AWS resources with a flick of the wrist.
-4. **AWS VPC**: The virtual fortress where all our AWS resources live.
-5. **Internet Gateway (IGW)**: The gateway to the internet wonderland for our VPC.
-6. **Public Route Table (RT)**: The highway patrol for our public subnets.
-7. **Public Subnets**: The bustling city blocks with direct access to the internet.
-8. **Private Route Table (PrivateRT)**: The secret passageways for our private subnets.
-9. **Private Subnets**: The cozy hideaways without direct internet access, using a NAT gateway for their online needs.
-10. **NAT Gateway**: The secret agent providing internet access for our private subnet dwellers.
-
-**End User Device:**
-1. **End User Device**: Your favorite gadget, ready to stream endless hours of entertainment from our Netflix clone.
-
 
 ## GitHub Branching Strategies
 ![alt text](infrastructure/diagrams/Diagram3.png)
@@ -187,3 +144,41 @@ We employ a structured branching strategy to manage development and deployment e
 
 ## Nuke-It-From-Orbit Instructions
 [Click here](infrastructure/docs/destroy-instructions.md)
+
+## The Big Reveal
+
+### Backend = TMDB API - movies
+![alt text](infrastructure/diagrams/backend-movies.png)
+
+### Backend = TMDB API - movies/top-rated
+![alt text](infrastructure/diagrams/backend-movies-top-rated.png)
+
+### Backend = TMDB API - movies/upcoming
+![alt text](infrastructure/diagrams/backend-movies-upcoming.png)
+
+### Backend = TMDB API - movie/<movieid>
+![alt text](infrastructure/diagrams/backend-movie-movieid.png)
+
+### Backend = TMDB API - movies/genre/<genreid>
+![alt text](infrastructure/diagrams/backend-movies-genre-genreid.png)
+
+### Backend = TMDB API - movies/search/<query>
+![alt text](infrastructure/diagrams/backend-movies-search-query.png)
+
+### Backend = YOUTUBE API - youtube/search/<query>
+![alt text](infrastructure/diagrams/backend-youtube-search-query.png)
+
+### Frontend = home
+![alt text](infrastructure/diagrams/frontend-output-home.png)
+
+### Frontend = top-rated
+![alt text](infrastructure/diagrams/frontend-output-top-rated.png)
+
+### Frontend = upcoming
+![alt text](infrastructure/diagrams/frontend-output-upcoming.png)
+
+### Frontend = genre-genreid
+![alt text](infrastructure/diagrams/frontend-output-genre-genreid.png)
+
+### Frontend = movies-search-query
+![alt text](infrastructure/diagrams/frontend-output-movies-search-query.png)
