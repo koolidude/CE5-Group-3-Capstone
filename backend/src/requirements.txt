@@ -4,3 +4,4 @@ requests==2.26.0
 Werkzeug==3.0.1
 google-api-python-client==2.38.0
 python-dotenv
+certifi==2023.7.22
